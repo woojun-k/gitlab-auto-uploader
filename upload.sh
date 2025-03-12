@@ -9,7 +9,7 @@ find "$base_dir" -type d -name ".git" | while read -r git_dir; do
 
     cd "$repo_dir" || continue
 
-    dir_name=$(basename "$repo_dir")g
+    dir_name=$(basename "$repo_dir")
 
     user_name=$(git config --local user.name)
     if [ -z "$user_name" ] || [ "$user_name" != [GITLAB_NAME] ]; then
